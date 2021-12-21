@@ -1,0 +1,499 @@
+{
+  "Constant": {
+    "prefix": "const",
+    "body": [
+      "const ${1} = ${2}"
+    ],
+    "description": "Constant"
+  },
+  "Variable": {
+    "prefix": "let",
+    "body": [
+      "let ${1} = ${2}"
+    ],
+    "description": "Variable"
+  },
+  "Date": {
+    "prefix": "dt",
+    "body": [
+      "$BLOCK_COMMENT_START $CURRENT_HOUR : $CURRENT_DATE/$CURRENT_MONTH/$CURRENT_YEAR $BLOCK_COMMENT_END"
+    ],
+    "description": "Date"
+  },
+  "If": {
+    "prefix": "if",
+    "body": [
+      "if (${1:condition}){",
+      "  ${2}",
+      "}"
+    ],
+    "description": "If"
+  },
+  "IfElse": {
+    "prefix": "ife",
+    "body": [
+      "if (${1:condition}){",
+      "  ${2}",
+      "}",
+      "else {",
+      "  ${3}",
+      "}"
+    ],
+    "description": "IfElse"
+  },
+  "if else if": {
+    "prefix": "elif",
+    "body": [
+      "if (${1:codition}){",
+      "  ${2}",
+      "}",
+      "else if (${3:codition}){",
+      "  ${4}",
+      "}",
+      "else {",
+      "  ${5}",
+      "}"
+    ],
+    "description": "if else if"
+  },
+  "While": {
+    "prefix": "wh",
+    "body": [
+      "while (${1:codition}){",
+      "  ${2}",
+      "}"
+    ],
+    "description": "While"
+  },
+  "Do While": {
+    "prefix": "dwh",
+    "body": [
+      "do {",
+      "  ${1}",
+      "} while (${2:codition})"
+    ],
+    "description": "Do While"
+  },
+  "Switch": {
+    "prefix": "sw",
+    "body": [
+      "switch(${1:expression}) {",
+      "  case ${2}:",
+      "    break;",
+      "  case ${3}:",
+      "    break;",
+      "  default:",
+      "    break;",
+      "} "
+    ],
+    "description": "Switch"
+  },
+  "For of": {
+    "prefix": "fo",
+    "body": [
+      "for (let ${1:item} of ${2:object}) {",
+      "  ${3}",
+      "}"
+    ],
+    "description": "For of"
+  },
+  "For in": {
+    "prefix": "fi",
+    "body": [
+      "for (let ${1:item} in ${2:object}) {",
+      "  ${3}",
+      "}"
+    ],
+    "description": "For in"
+  },
+  "ForEach": {
+    "prefix": "fe",
+    "body": [
+      "${1:array}.forEach (${2:params} => {",
+      "  ${3}",
+      "} )"
+    ],
+    "description": "ForEach"
+  },
+  "Map": {
+    "prefix": "map",
+    "body": [
+      "let ${1:newArray} = ${2:array}.map((${3}) => ${4})"
+    ],
+    "description": "Map"
+  },
+  "Find": {
+    "prefix": "find",
+    "body": [
+      "let ${1:ele} = ${2:array}.find((${3}) => ${4})"
+    ],
+    "description": "Find"
+  },
+  "Filter": {
+    "prefix": "filter",
+    "body": [
+      "let ${1:newArray} = ${2:array}.filter((${3}) => ${4})"
+    ],
+    "description": "Filter"
+  },
+  "Console Functions": {
+    "prefix": "cl",
+    "body": [
+      "console.${1|log,assert,clear,count,debug,dir,error,group,groupEnd,trace,warn,info,table,time,timeEnd|}(\"${2}\")"
+    ],
+    "description": "Console Functions"
+  },
+  "Arrow function": {
+    "prefix": "nfn",
+    "body": [
+      "const ${1} = (${2}) => {",
+      "  ${3}",
+      "}"
+    ],
+    "description": "Arrow function"
+  },
+  "function": {
+    "prefix": "fn",
+    "body": [
+      "function ${1} (${2}){",
+      "  ${3}",
+      "}"
+    ],
+    "description": "function"
+  },
+  "Anonymous Function": {
+    "prefix": "afn",
+    "body": [
+      "(${1}) => {",
+      "  ${2}",
+      "}"
+    ],
+    "description": "Anonymous Function"
+  },
+  "Create a new Object": {
+    "prefix": "co",
+    "body": [
+      "const ${1} = (${2}) => {",
+      "  if (!new.target) {",
+      "    return new ${1} (${2});",
+      "  }",
+      "  this.(${3}) = (${4});",
+      "  this.(${5}) = (${6}) => {",
+      "    ${7}",
+      "}",
+      "}"
+    ],
+    "description": "Create a new Object"
+  },
+  "new Object": {
+    "prefix": "no",
+    "body": [
+      "const ${1} = new ${2}(${3})"
+    ],
+    "description": "new Object"
+  },
+  "tostring": {
+    "prefix": "ts",
+    "body": [
+      "tostring ${1} = (${2}) => {",
+      "  return `${3}`;",
+      "}"
+    ],
+    "description": "tostring"
+  },
+  "Class": {
+    "prefix": "cls",
+    "body": [
+      "class ${1:classname} {",
+      "  constructor(${2:params}){",
+      "    this.${3:param} = ${4:value}",
+      "    }",
+      "  ${5:method}(6:params){",
+      "    return ${7};",
+      "  }",
+      "}"
+    ],
+    "description": "Class"
+  },
+  "Constructor": {
+    "prefix": "con",
+    "body": [
+      "constructor(${1:params}){",
+      "    this.${2:param} = ${3:value}",
+      "}"
+    ],
+    "description": "Constructor"
+  },
+  "Getter": {
+    "prefix": "gt",
+    "body": [
+      "get ${1:propertyName}() {",
+      "  return this.${2};",
+      "}"
+    ],
+    "description": "Getter"
+  },
+  "Setter": {
+    "prefix": "st",
+    "body": [
+      "set ${1:propertyName}(${2:value}) {",
+      "  this.${3} = ${2:value};",
+      "}"
+    ],
+    "description": "Setter"
+  },
+  "Factory Function": {
+    "prefix": "ff",
+    "body": [
+      "const ${1:createObj} = ${2:params} => {",
+      "  return {",
+      "    ${3:param}:${4:value}",
+      "    ${5:function}(){",
+      "      return ${6} ;",
+      "    }",
+      "  }",
+      "}"
+    ],
+    "description": "Factory Function"
+  },
+  "Template Leteral": {
+    "prefix": "tl",
+    "body": [
+      "`${1} ${${2}} ${${3}}`"
+    ],
+    "description": "Template Leteral"
+  },
+  "setInterval": {
+    "prefix": "sti",
+    "body": [
+      "setInterval(() => {})"
+    ],
+    "description": "setInterval"
+  },
+  "setTimeout": {
+    "prefix": "sto",
+    "body": [
+      "setTimeout(() => {})"
+    ],
+    "description": "setTimeout"
+  },
+  "destructing Array": {
+    "prefix": "dar",
+    "body": [
+      "const [${1}, ${2}] = [${3:array}]"
+    ],
+    "description": "destructing Array"
+  },
+  "destructing Object": {
+    "prefix": "dob",
+    "body": [
+      "const {${1}, ${2}} = ${3:obj}"
+    ],
+    "description": "destructing Object"
+  },
+  //sql
+  "Data types": {
+    "prefix": "tp",
+    "body": [
+      "${1|INT,CHAR(55),NVARCHAR(55),BIT,FLOAT,DOUBLE,DECIMAL,DATE,DATETIME,MONEY,NTEXT,VARBINARY,IMAGE,XML|}"
+    ],
+    "description": "Data types"
+  },
+  "CONSTRAINT": {
+    "prefix": "cn",
+    "body": [
+      " ${1|IDENTITY(1\\,1),NOT NULL,UNIQUE,PRIMARY KEY,FOREIGN KEY,CHECK,DEFAULT,INDEX|}"
+    ],
+    "description": "CONSTRAINT"
+  },
+  "CREATE DATABASE": {
+    "prefix": "cdb",
+    "body": [
+      "CREATE DATABASE ${1:dbname};"
+    ],
+    "description": "CREATE DATABASE"
+  },
+  "DROP DATABASE": {
+    "prefix": "ddb",
+    "body": [
+      "DROP DATABASE ${1:dbname};"
+    ],
+    "description": "DROP DATABASE"
+  },
+  "BACKUP DATABASE": {
+    "prefix": "bdb",
+    "body": [
+      "BACKUP DATABASE ${1:dbname}",
+      "TO DISK = '${2:filepath}'; "
+    ],
+    "description": "BACKUP DATABASE"
+  },
+  "CREATE TABLE": {
+    "prefix": "ctb",
+    "body": [
+      "CREATE TABLE ${1:tablename} (",
+      "${2}",
+      ");"
+    ],
+    "description": "CREATE TABLE"
+  },
+  "DROP TABLE": {
+    "prefix": "dtb",
+    "body": [
+      "DROP TABLE ${1:tablename};"
+    ],
+    "description": "DROP TABLE"
+  },
+  "Add column": {
+    "prefix": "acl",
+    "body": [
+      "ALTER TABLE ${1:table_name}",
+      "ADD ${2:column_name} ${2:datatype};"
+    ],
+    "description": "Add column"
+  },
+  "Modify column": {
+    "prefix": "mcl",
+    "body": [
+      "ALTER TABLE ${1:table_name}",
+      "ALTER ${2:column_name} ${2:datatype}; "
+    ],
+    "description": "Modify column"
+  },
+  "DROP column": {
+    "prefix": "dcl",
+    "body": [
+      "ALTER TABLE ${1:table_name}",
+      "DROP ${2:column_name};"
+    ],
+    "description": "DROP column"
+  },
+  "ADD CONSTRAINT": {
+    "prefix": "acn",
+    "body": [
+      "ALTER TABLE ${1:tablename}",
+      "ADD CONSTRAINT ${2};"
+    ],
+    "description": "ADD CONSTRAINT"
+  },
+  "DROP CONSTRAINT": {
+    "prefix": "dcn",
+    "body": [
+      "ALTER TABLE ${1:tablename}",
+      "DROP CONSTRAINT ${2:Consname};"
+    ],
+    "description": "DROP CONSTRAINT"
+  },
+  "REFERENCE TABLE": {
+    "prefix": "ref",
+    "body": [
+      "REFERENCES ${1:tablename}(${2:columname});"
+    ],
+    "description": "REFERENCE TABLE"
+  },
+  "SELECT": {
+    "prefix": "sl",
+    "body": [
+      "SELECT ${1:*} FROM ${2:table_name}; "
+    ],
+    "description": "SELECT"
+  },
+  "INSERT INTO": {
+    "prefix": "ii",
+    "body": [
+      "INSERT INTO ${1:table_name} (${2:columns})",
+      "VALUES (${3:values}); "
+    ],
+    "description": "INSERT INTO"
+  },
+  "UPDATE": {
+    "prefix": "up",
+    "body": [
+      "UPDATE ${1:table_name}",
+      "SET ${2:column} = ${3:value}",
+      "WHERE ${4:condition}; "
+    ],
+    "description": "UPDATE"
+  },
+  "DELETE": {
+    "prefix": "dl",
+    "body": [
+      "DELETE FROM ${1:table_name} WHERE ${2:condition};"
+    ],
+    "description": "DELETE"
+  },
+  "INDEX": {
+    "prefix": "ind",
+    "body": [
+      "CREATE UNIQUE INDEX ${1:index_name}",
+      "ON ${2:table_name} (${3:column1}, ${2:column2});"
+    ],
+    "description": "INDEX"
+  },
+  "CREATE OR REPLACE VIEW": {
+    "prefix": "view",
+    "body": [
+      "CREATE OR REPLACE VIEW [${1:view_name}] AS",
+      "${2:statement}"
+    ],
+    "description": "CREATE OR REPLACE VIEW"
+  },
+  "DROP": {
+    "prefix": "dview",
+    "body": [
+      "DROP [${1:view_name}];"
+    ],
+    "description": "DROP"
+  },
+  "CREATE PROCEDURE": {
+    "prefix": "pro",
+    "body": [
+      "CREATE PROCEDURE ${1:procudure_name} @${2:param}",
+      "AS",
+      "${3:statement}",
+      "GO;"
+    ],
+    "description": "CREATE PROCEDURE"
+  },
+  "EXEC PROCEDURE": {
+    "prefix": "xpro",
+    "body": [
+      "EXEC ${1:procudure_name} @${2:param} = ${3:value}; "
+    ],
+    "description": "EXEC PROCEDURE"
+  },
+  "INNER JOIN": {
+    "prefix": "injoin",
+    "body": [
+      "INNER JOIN ${1:table2}",
+      "ON ${2:table1.column_name} = ${3:table2.column_name};"
+    ],
+    "description": "INNER JOIN"
+  },
+  "LEFT JOIN": {
+    "prefix": "ljoin",
+    "body": [
+      "LEFT JOIN ${1:table2}",
+      "ON ${2:table1.column_name} = ${3:table2.column_name};"
+    ],
+    "description": "LEFT JOIN"
+  },
+  "RIGHT JOIN": {
+    "prefix": "rjoin",
+    "body": [
+      "RIGHT JOIN ${1:table2}",
+      "ON ${2:table1.column_name} = ${3:table2.column_name};"
+    ],
+    "description": "RIGHT JOIN"
+  },
+  "FULL JOIN": {
+    "prefix": "fjoin",
+    "body": [
+      "FULL OUTER JOIN ${1:table2}",
+      "ON ${2:table1.column_name} = ${3:table2.column_name}",
+      "WHERE ${4:condition};"
+    ],
+    "description": "FULL JOIN"
+  }
+
+}

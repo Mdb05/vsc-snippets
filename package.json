@@ -1,0 +1,28 @@
+{
+    "name": "vscsnippets",
+    "description": "Code snippets",
+    "version": "1.0.0",
+    "displayName": "Vsc Snippets",
+    "publisher": "mdb05",
+    "icon": "images/snippets.png",
+    "license": "SEE LICENSE IN LICENSE.md",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/mdb05/vsc-snippets"
+    },
+    "engines": {
+      "vscode": "0.10.x"
+    },
+    "categories": [
+      "Snippets"
+    ],
+    "keywords":[
+      "Snippets", "Vscode snippets", "Code snippets"
+    ],
+    "contributes": {
+      "snippets": [
+        {
+          "path": "snippets.code-snippets"
+        }]
+    }
+  }
